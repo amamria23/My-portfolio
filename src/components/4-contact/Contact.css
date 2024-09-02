@@ -1,0 +1,116 @@
+.light p {
+  color: black;
+}
+
+.contact-us h1.title {
+  color: var(--title);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-us .icon-envelope {
+  color: var(--SubTitle);
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+.contact-us p.subtitle {
+  color: var(--SubTitle);
+  margin-bottom: 1rem;
+  line-height: 1.4rem;
+}
+
+.contact-us form {
+  margin-top: 1rem;
+}
+
+.contact-us label {
+  color: var(--SubTitle);
+  font-size: 0.95rem;
+  margin-right: 1rem;
+  width: 7rem;
+}
+
+.contact-us #email,
+.contact-us #message {
+  all: unset;
+  background-color: rgba(63, 63, 70, 0.151);
+  border: 1px solid rgb(63, 63, 70);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 16rem;
+  font-size: 1.05rem;
+  transition: 0.5s all;
+}
+
+.light .contact-us #email,
+.light .contact-us #message {
+  background-color: rgba(255, 255, 255, 0.452);
+  color: black;
+}
+
+.contact-us #email:focus,
+.contact-us #message:focus {
+  border: 1px solid rgb(27, 168, 102);
+}
+
+.contact-us #email:hover,
+.contact-us #message:hover {
+  border: 1px solid rgb(27, 168, 102);
+}
+
+.contact-us #message {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact-us form button {
+  font-size: 1.05rem;
+  text-transform: capitalize;
+  background-color: rgb(36, 37, 46);
+  padding: 0.76rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.2s all;
+  margin-top: 1rem;
+}
+
+.contact-us button:hover {
+  scale: 0.9;
+}
+
+.contact-us .animation{
+  width: 100%;
+  translate: 70px 10px;
+}
+
+@media (max-width: 900px) {
+  .contact-us .animation {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .contact-us {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact-us form div.flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-us #email,
+  .contact-us #message {
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .contact-us #email,
+  .contact-us #message {
+    margin-top: 0.8rem;
+    width: 12rem;
+  }
+}

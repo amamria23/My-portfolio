@@ -1,0 +1,169 @@
+/* =============
+ table of contents
+===============
+ 
+1. header styles
+2. style link
+3. style icommon button
+4. modal==pop up
+5. animation Modal && media querry 
+ 
+*/
+ 
+ 
+ 
+ 
+/* ===============
+   1. header style
+================ */
+
+
+
+header.flex {
+  justify-content: space-between;
+  padding: 0 2.4rem;
+  margin-top: 2rem; 
+}
+
+header nav {
+  background-color: var(--bgHeader);
+  padding: 0.77rem 1.6rem;
+  border-radius: 1.2rem;
+  box-shadow: 1px 1px 40px #2323232a;
+}
+
+header ul.flex {
+  gap: 10px;
+}
+ 
+/* ===============
+   2. style link
+================ */
+header ul li a {
+  color: var(--title);
+  opacity: 0.9;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+header ul li a:hover {
+  color: var(--blue);
+  opacity: 1;
+  font-size: 0.9rem;
+}
+
+/* =======================
+   3. style icommon button
+======================= */
+
+header button {
+  font-size: 1.2rem;
+}
+
+header button.icon-th-menu, header button.moon{
+  color: var(--SubTitle);
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(244, 165, 96, 0.266);
+  border-radius: 50%;
+  background-color: var(--bgHeader);
+  text-align: center;
+  opacity: 0.8;
+  transition: 0.2s all;
+}
+
+
+
+header button.icon-th-menu:hover, header button.moon:hover{
+  opacity: 1;
+  border-color:rgba(244, 165, 96, 1);
+  scale: 1.1;
+}
+
+header button.icon-th-menu:active, header button.moon:active{
+  scale: 0.9;
+}
+
+.light header .icon-sun{
+  color: orange;
+}
+
+header button.icon-close{
+  color: var(--SubTitle);
+  font-size: 1.3rem;
+  transition: 0.3s all;
+}
+
+header button.icon-close:hover{
+  color: crimson;
+  font-size: 1.4rem;
+  rotate: 180deg;
+}
+
+/* ================
+   4. modal==pop up
+=================*/
+
+header .fixed{
+  position: fixed;
+  inset: 0;
+  background-color: rgba(40, 40, 41, 0.91);
+  backdrop-filter: blur(5px);
+}
+
+header .fixed ul.modal{
+  animation: mymove 0.7s;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.77rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+}
+
+.light header .fixed ul.modal{
+  background-color: var(--secondary);
+}
+
+header .fixed ul.modal li{
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.77rem;
+  padding-top: 0.5rem;
+}
+
+header .fixed ul.modal li:last-child{
+  border: none;
+}
+header .fixed ul.modal li:first-child{
+  text-align: right;
+  border: none;
+  padding-bottom: 0;
+  padding-top: 0.2rem;
+}
+
+
+/* ==================================
+   5. animation Modal && media querry
+================================== */
+
+
+@keyframes mymove {
+  0%   {scale: 0;}
+  50%  {scale: 1.2;}
+  100% {scale: 1;}
+} 
+
+
+
+@media (max-width: 700px) {
+  header nav, header .esc {
+    display: none;
+  }
+}
+
+@media (min-width: 700px) {
+  header .showModal {
+    display: none;
+  }
+}
